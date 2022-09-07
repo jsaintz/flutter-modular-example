@@ -4,6 +4,9 @@ import 'package:flutter_modular_example/app/category/category_page.dart';
 class CategoryModule extends Module {
   @override
   List<ModularRoute> get routes => [
-        ChildRoute(Modular.initialRoute, child: ((context, args) => const CategoryPage())),
+        ChildRoute(
+          Modular.initialRoute,
+          child: (context, args) => CategoryPage(category: args.data),
+        ),
       ];
 }
