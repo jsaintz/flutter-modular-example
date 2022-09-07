@@ -1,8 +1,9 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 class ProductPage extends StatelessWidget {
-  const ProductPage({Key? key}) : super(key: key);
+  final String? name;
+  const ProductPage({Key? key, this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class ProductPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(Modular.args.params['nome'] ?? 'nome não enviado'),
+          Text(name ?? 'nome não enviado'),
         ],
       ),
     );

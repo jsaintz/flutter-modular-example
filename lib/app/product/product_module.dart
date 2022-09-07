@@ -7,6 +7,13 @@ class ProductModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/:nome', child: (context, args) => const ProductPage()),
+    ChildRoute(
+      '/:name',
+      child: (context, args) => ProductPage(name: args.params['name']),
+    ),
+    ChildRoute(
+      '/xyz',
+      child: (context, args) => ProductPage(name: args.queryParams['name']),
+    ),
   ];
 }

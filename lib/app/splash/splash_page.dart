@@ -27,6 +27,12 @@ class SplashPage extends StatelessWidget {
               },
               child: const Text('Produto Module'),
             ),
+            TextButton(
+              onPressed: () {
+                Modular.to.pushNamed('/product/xyz?nome=Product_x');
+              },
+              child: const Text('Produto QUery Module'),
+            ),
           ],
         ),
       ),
